@@ -14,8 +14,8 @@ RUN dnf install protobuf protobuf swiften gcc gcc-c++ make libpqxx-devel libpurp
 		rpm -U /root/rpmbuild/RPMS/x86_64/*.rpm && \
 		cp ./packaging/docker/run.sh /run.sh && \
 		cd .. && \
-		rm -rf spectrum2 && \
-		rm -rf ~/rpmbuild && \
+# 		rm -rf spectrum2 && \
+# 		rm -rf ~/rpmbuild && \
 	echo "---> Installing purple-facebook" && \
 		wget https://github.com/jgeboski/purple-facebook/releases/download/6a0a79182ebc/purple-facebook-6a0a79182ebc.tar.gz && \
 		tar -xf purple-facebook-6a0a79182ebc.tar.gz  && cd purple-facebook-6a0a79182ebc && \
@@ -30,7 +30,7 @@ RUN dnf install protobuf protobuf swiften gcc gcc-c++ make libpqxx-devel libpurp
 		make CFLAGS=-DFEDORA=1 && \
 		make install && \
 		cd ../.. && \
-		rm -rf skype4pidgin && \
+# 		rm -rf skype4pidgin && \
 	echo "---> Installing transwhat" && \
 		pip install --pre e4u protobuf python-dateutil yowsup2 Pillow==2.9.0 &&\
 		git clone git://github.com/stv0g/transwhat.git &&\
